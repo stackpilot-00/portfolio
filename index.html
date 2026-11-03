@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M Shankarnath | Data Science Student &amp; Web Developer</title>
+<meta name="description" content="Portfolio of M Shankarnath, a Data Science engineering student at Atria Institute of Technology interested in data analytics, software development and website design.">
+<meta name="theme-color" content="#080D18">
+<meta property="og:type" content="website">
+<meta property="og:title" content="M Shankarnath | Data Science Student">
+<meta property="og:description" content="Data Science engineering student exploring data, web development and design.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script>
+/* Adds "js" class, and "intro-on" only once per session and if motion is allowed. */
+document.documentElement.classList.add('js');
+try{if(!sessionStorage.getItem('msIntro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('intro-on')}catch(e){}
+</script>
+</head>
+<body data-page="home">
+<!-- MS opening animation (SVG + CSS). Hidden unless "intro-on" is set. -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-glow"></div>
+  <svg class="intro-logo" viewBox="0 0 200 200">
+    <circle class="i-dot" cx="100" cy="100" r="3"/>
+    <circle class="i-ring" cx="100" cy="100" r="80" transform="rotate(-90 100 100)"/>
+    <circle class="i-spark" cx="100" cy="100" r="80" transform="rotate(-90 100 100)"/>
+    <text class="i-text" x="100" y="100" text-anchor="middle" dominant-baseline="central">MS</text>
+  </svg>
+</div>
+
+<a class="skip" href="#home">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+
+<main>
+<section id="home" class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="label hero-anim">DATA SCIENCE STUDENT</p>
+      <h1 class="hero-anim">Hi, I'm M&nbsp;Shankarnath.</h1>
+      <h2 class="tagline hero-anim">Exploring Data, Building Ideas, Designing Experiences.</h2>
+      <p class="lead hero-anim">Hi, I'm M Shankarnath, a Data Science engineering student passionate about technology, data, and creative problem-solving. I enjoy exploring website development and design while building my knowledge of programming, data analytics, and software development. I'm focused on developing practical projects, strengthening my technical skills, and preparing for opportunities where I can learn, contribute, and grow.</p>
+      <div class="actions hero-anim">
+        <a class="btn" href="#projects">Explore My Projects</a>
+        <a class="btn ghost" href="#resume" data-resume>Download Resume</a>
+      </div>
+      <div class="socials hero-anim" data-socials></div>
+    </div>
+    <div class="photo hero-anim">
+      <!-- Replace the file in assets/images or change "profilePhoto" in js/data.js -->
+      <img id="profile-photo" src="assets/images/profile-placeholder.svg" alt="Profile photo placeholder for M Shankarnath" width="360" height="420">
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section alt">
+  <div class="wrap narrow reveal">
+    <h2>About me</h2>
+    <p>I'm a third-year Computer Science and Engineering student specializing in Data Science at Atria Institute of Technology. I'm in my fifth semester and expect to graduate in 2028.</p>
+    <p>I enjoy website development and design, and I'm building my skills in programming, data science, and data analytics. I like turning ideas into useful software.</p>
+    <p>My goal is to earn internships and prepare for placements. I learn best by building practical projects, and I'm focused on adding more of them.</p>
+    <ul class="chips"><li class="chip">Engineering Student</li><li class="chip">Data Science</li><li class="chip">Web Development</li><li class="chip">Software Development</li></ul>
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <div class="wrap reveal">
+    <h2>Technical skills</h2>
+    <p class="muted intro-text">Only skills I'm comfortable listing. Coding proficiency: intermediate.</p>
+    <div class="grid cols-2" id="skill-groups"></div>
+  </div>
+</section>
+
+<section id="projects" class="section alt">
+  <div class="wrap reveal">
+    <div class="head-row"><h2>Projects</h2><a class="link" href="projects.html">View all projects</a></div>
+    <div class="grid cols-3" id="project-grid" data-limit="3"></div>
+  </div>
+</section>
+
+<section id="education" class="section">
+  <div class="wrap narrow reveal">
+    <h2>Education</h2>
+    <div class="timeline"><div class="card" id="edu-card">
+      <h3>Atria Institute of Technology</h3>
+      <p>Computer Science and Engineering — Data Science</p>
+      <p class="muted">Third Year — Fifth Semester &nbsp;|&nbsp; Expected graduation: 2028</p>
+      <p>My academic interests are data science, data analytics, software development, and web development.</p>
+    </div></div>
+  </div>
+</section>
+
+<section id="certificates" class="section alt">
+  <div class="wrap reveal">
+    <h2>Certificates and achievements</h2>
+    <div class="grid cols-3" id="cert-grid"></div>
+  </div>
+</section>
+
+<section id="resume" class="section">
+  <div class="wrap narrow reveal">
+    <div class="card resume-card">
+      <div><h2>Resume</h2><p id="resume-text" class="muted">My resume will be available soon.</p></div>
+      <span id="resume-slot"><span class="btn disabled" aria-disabled="true">Coming soon</span></span>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section alt">
+  <div class="wrap reveal">
+    <h2>Contact</h2>
+    <p class="muted intro-text">Open to internships, placement opportunities and collaboration.</p>
+    <div class="contact-grid">
+      <div id="contact-info" class="contact-info"></div>
+      <form id="contact-form" class="card" novalidate>
+        <div class="field"><label for="c-name">Name</label><input id="c-name" name="name" autocomplete="name" required><span class="err" aria-live="polite"></span></div>
+        <div class="field"><label for="c-email">Email address</label><input id="c-email" name="email" type="email" autocomplete="email" required><span class="err" aria-live="polite"></span></div>
+        <div class="field"><label for="c-subject">Subject</label><input id="c-subject" name="subject" required><span class="err" aria-live="polite"></span></div>
+        <div class="field"><label for="c-message">Message</label><textarea id="c-message" name="message" rows="5" required></textarea><span class="err" aria-live="polite"></span></div>
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn" type="submit">Send message</button>
+        <p id="form-status" class="status-msg" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
